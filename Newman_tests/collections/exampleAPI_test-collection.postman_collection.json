@@ -1,0 +1,50 @@
+{
+	"info": {
+		"name": "exampleAPI_test-collection",
+		"_postman_id": "0fa7e525-f290-f868-3ee8-35a8a65290cd",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get message",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f1de7fef-06a8-4837-88a6-faf7e79ba5a1",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8090/message",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"message"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
