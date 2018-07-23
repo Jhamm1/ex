@@ -1,0 +1,14 @@
+version: '2.1'
+services:
+  drjay-app4:
+    build: .
+    container_name: drjay-app4
+    ports:
+      - "8090:8090"
+  test:
+    image: postman/newman_ubuntu1404
+    depends_on:
+      - "drjay-app4"
+    volumes:
+      - /Users/telecomsplus/Downloads/Repos/exampleAPI/Newman_tests/collections:/etc/newman
+    command: run -v -t postman/newman_ubuntu1404 run "exampleAPI_test-collection.postman_collection"

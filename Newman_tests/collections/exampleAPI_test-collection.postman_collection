@@ -1,0 +1,47 @@
+{
+	"info": {
+		"name": "exampleAPI_test-collection copy",
+		"_postman_id": "478ea586-4a0f-7da3-762b-c96361a0f109",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get message",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "14247fed-7f26-47e2-a04b-55e3337d0379",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:8090/message",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"message"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

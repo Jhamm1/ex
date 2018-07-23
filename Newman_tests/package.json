@@ -1,0 +1,19 @@
+{
+  "name": "newman_tests",
+  "version": "1.0.0",
+  "main": "testcode.js",
+  "dependencies": {
+    "nodemon": "^1.17.5"
+  },
+  "devDependencies": {
+    "cjs": "0.0.11",
+    "find-cache-dir": "^2.0.0",
+    "newman": "^3.10.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

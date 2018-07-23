@@ -2,4 +2,6 @@
 
 ls
 
-go run api.go
+go build
+
+./exampleAPI
